@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if a Number is a Multiple of 3</title>
+</head>
+<body>
+
+<script>
+    
+    function getUserInput() {
+        return prompt("숫자를 입력하세요:");
+    }
+
+    
+    function isMultipleOfThree(number) {
+        return number % 3 === 0;
+    }
+
+       function showResult(number) {
+        if (isMultipleOfThree(number)) {
+            document.write("입력받은 값은 " + number + "이(가) 3의 배수입니다.");
+        } else {
+            document.write("입력받은 값은 " + number + "이(가) 3의 배수가 아닙니다.");
+        }
+    }
+
+    
+    function main() {
+        var userInput = getUserInput();
+        var number = parseInt(userInput);
+
+    
+        if (!isNaN(number)) {
+            showResult(number);
+        } else {
+            document.write("유효한 숫자를 입력하세요.");
+        }
+    }
+
+    
+    main();
+</script>
+
+</body>
+</html>
